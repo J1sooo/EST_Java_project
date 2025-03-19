@@ -16,11 +16,11 @@ public class FunctionalLambdaEx {
         consumer.accept(221);
 
         // Function<T,R>
-        Function<Integer, String> function = a -> String.valueOf(a);
+        Function<Integer, String> function = String::valueOf;
         String returnValue = function.apply(23);
         System.out.println("Function 타입 정의 결과: " + returnValue);
 
-        Function<String, Integer> function2 = b -> Integer.valueOf(b) + 50;
+        Function<String, Integer> function2 = b -> Integer.parseInt(b) + 50;
         int returnValue2 = function2.apply("424");
         System.out.println("Function 타입 정의 결과: " + returnValue2);
 
